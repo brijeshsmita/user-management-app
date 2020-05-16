@@ -1,0 +1,24 @@
+<br/><br/>
+  <div class="col-md-6 col-md-offset-2">
+  <h1> Employeen Form</h1>
+  <form #empForm="ngForm">
+    <div class="form-group">
+      <label for="empId">ID</label>
+      <input type="number" id="empId" name="empId" class="form-control" [(ngModel)]="employee.empId" />
+    </div>
+    <div class="form-group">
+      <label for="empName">Name</label>
+      <input type="text" id="empName" name="empName" class="form-control" [(ngModel)]="employee.empName" />
+    </div>
+    <div class="form-group">
+      <label for="empSal">Salary</label>
+      <input type="number" id="empSal" name="empSal" class="form-control" [(ngModel)]="employee.empSal" />
+    </div>
+    <div class="form-group">
+      <label for="empDept">Department</label>
+      <input type="text" id="empDept" name="empDept" class="form-control" [(ngModel)]="employee.empDept" />
+    </div>
+      <button class="btn btn-success" type="submit" [disabled]="!empForm.valid" (click)='addEmployee()'>Add Employee Record</button>
+  </form>
+</div>
+<div>{{employee.empId}} {{employee.empName}} {{employee.empSal}} {{employee.empDept}}</div>

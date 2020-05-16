@@ -1,0 +1,65 @@
+<div class="col-md-10 col-md-offset-2">
+  <h3>Register User</h3><form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+ 
+   <div class="form-group">
+    <label for="firstname">First Name </label>
+    <input class="form-control" type="text" id="firstname" name="firstname" ngModel>
+   </div>
+ 
+   <div class="form-group">
+    <label for="lastname">Last Name </label>
+    <input class="form-control" type="text" id="lastname" name="lastname" ngModel>
+   </div>
+ 
+   <div class="form-group">
+    <label for="email">Email </label>
+    <input class="form-control"  type="text" id="email" name="email"  ngModel>
+   </div>
+ 
+   <div class="form-group">
+    <label for="gender">Geneder </label>
+    &nbsp;&nbsp;<input  class="radio radio-inline" type="radio" value="male" id="gender" name="gender" ngModel> Male
+    &nbsp;<input class="radio  radio-inline"  type="radio" value="female" id="gender" name="gender" ngModel> Female
+   </div>
+ 
+   <div class="form-group">
+    <label for="isMarried">Married </label>
+    &nbsp;&nbsp;<input  class="checkbox checkbox-inline"  type="checkbox" id="isMarried" name="isMarried" ngModel>
+   </div>
+ 
+   <div class="form-group">
+    <label for="country">Country </label>
+    &nbsp;&nbsp;<select class="select" id="country" name="country" ngModel>
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+   </div>
+ 
+  <div ngModelGroup="address">
+ 
+     <div class="form-group">
+      <label for="city">City</label>
+      <input class="form-control" type="text" id="city" name="city" ngModel>
+     </div>
+ 
+     <div class="form-group">
+      <label for="street">Street</label>
+      <input class="form-control" type="text" id="street" name="street" ngModel>
+     </div>
+     <div class="form-group">
+      <label for="pincode">Pin Code</label>
+      <input class="form-control" type="text" id="pincode" name="pincode" ngModel>
+     </div>
+ 
+  </div>
+ 
+   <div class="form-group">
+    <button class="btn btn-success">Register</button> &nbsp; &nbsp;
+      <button class="btn btn-danger" type="reset">Cancel</button>
+     
+   </div>
+ 
+</form>
+</div>
+ 

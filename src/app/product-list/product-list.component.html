@@ -1,0 +1,42 @@
+<p>
+  product-list works!
+</p>
+<!-- Binding the FormGroup object created in the ts file
+by binding the formGroup Property-->
+<div class ="cotainer container-fluid">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <!--on submitting the form the ngSubmit event is Binded
+  which will call onSubmit() fuction written in ts file-->
+  Product Id :<input type = "text" formControlName="productId">
+  <div class="alert  alert-danger" *ngIf="productForm.get('productId').hasError('pattern') && productForm.get('productId').touched">  
+    Product Id is required and should less than 9 characters.  
+  </div>  
+  
+  Product Name :<input type = "text" formControlName="productName">
+  <div class="alert  alert-danger" *ngIf="productForm.get('productName').hasError('pattern') && productForm.get('productName').touched">  
+    Product Name is required and should start with Caps and between (3-20) characters.  
+  </div>  
+  Product Price :<input type = "text" formControlName="productPrice">
+  <div class="alert  alert-danger" *ngIf="productForm.get('productPrice').hasError('maxLength') && productForm.get('productPrice').touched">  
+    Product Price is required and should less than 6 digit.  
+  </div> 
+  <input type = "submit" value="Add Product" class="btn btn-success"><br>
+  {{productForm.controls.productId.value}}
+  {{productForm.controls.productName.value}}
+  {{productForm.controls.productPrice.value}}
+</form>
+<table class="table  table-dark ">
+  <tr>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Product Price</th>
+  </tr>
+<tr *ngFor="let p1 of productList">
+  <td>{{p1.productId}}</td><!--one way data- biding -iterpolation
+  data changed  in the .ts file will automatically refects in html/template-->
+  <td>{{p1.productName}}</td>
+  <td>{{p1.productPrice}}</td>
+</tr>
+</table>
+</div>
+

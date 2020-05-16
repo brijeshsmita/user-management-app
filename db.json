@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "sia@gmail.com",
+      "firstName": "Sia B",
+      "lastName": "Gupta"
+    },
+    {
+      "id": 3,
+      "firstName": "Shivansh",
+      "lastName": "Kumar",
+      "email": "shivansh@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Zara",
+      "lastName": "Khan",
+      "email": "zara@gmail.com"
+    },
+    {
+      "id": 6,
+      "email": "jeevan@gmail.com",
+      "firstName": "Jeevan",
+      "lastName": "K"
+    },
+    {
+      "id": 7,
+      "firstName": "SMita",
+      "lastName": "Kumar",
+      "email": "smita.a.kumar@capgemini.com"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<div [ngStyle]="{background: 'url(../assets/images/bg.jpg)'}">
+<!-- <div style="color:white; background-color: purple; padding: 10px; ">
+  <h2 style="text-align:center; margin-top: 20px; ">User Management Angular App ...! </h2>
+</div> -->
+<div ><app-header></app-header></div><br/><br/>
+<br/><br/>
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+<!-- now add the css in styles.css -->
+  <div class="col-md-10 col-md-offset-2">
+  <div class="row">  
+    <div class="col-sm-10" style="padding-left: 40px;">      
+      <router-outlet></router-outlet>      
+    </div>
+    <div class="col-sm-2">
+      <br/>
+        <img src="../assets/images/users.png" />
+    </div>
+  </div>
+  <br/><br/>
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>
